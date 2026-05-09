@@ -1,4 +1,4 @@
-import { nominees } from "../data/nominees";
+import { nominees } from "../data/nominees.js";
 import { io } from "../server.js";
 
 export const voteCandidate = (req, res) => {
