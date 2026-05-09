@@ -1,0 +1,17 @@
+export const nominees = [
+  {
+    id: 1,
+    name: "Candidate A",
+    votes: 0,
+  },
+  {
+    id: 2,
+    name: "Candidate B",
+    votes: 0,
+  },
+  {
+    id: 3,
+    name: "Candidate C",
+    votes: 0,
+  },
+];
