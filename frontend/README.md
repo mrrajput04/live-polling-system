@@ -1,16 +1,205 @@
-# React + Vite
+# Live Polling System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for the real-time live polling system.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+# Tech Stack
 
-## React Compiler
+- React.js
+- Vite
+- Tailwind CSS
+- Axios
+- Socket.IO Client
+- Recharts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+# Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Real-time live vote updates
+- Responsive modern UI
+- Admin analytics dashboard
+- Interactive charts
+- Session-based voting flow
+- Live vote tracking
+
+---
+
+# Project Structure
+
+frontend/
+│
+├── src/
+│ ├── components/
+│ ├── pages/
+│ ├── services/
+│ ├── socket/
+│ ├── App.jsx
+│ └── main.jsx
+│
+├── package.json
+└── vite.config.js
+
+---
+
+# Installation
+
+## Clone Repository
+
+```bash
+git clone <repo-url>
+```
+
+## Navigate to frontend
+
+```bash
+cd frontend
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+# Run Development Server
+
+```bash
+npm run dev
+```
+
+Application runs on:
+
+```bash
+http://localhost:5173
+```
+
+---
+
+# Frontend Pages
+
+## Voting Page
+
+Route:
+
+```bash
+/
+```
+
+Features:
+
+- View nominees
+- Submit vote
+- One vote per session
+
+---
+
+## Admin Dashboard
+
+Route:
+
+```bash
+/admin
+```
+
+Features:
+
+- Total vote count
+- Candidate-wise vote count
+- Real-time updates
+- Pie chart analytics
+
+---
+
+# Socket Integration
+
+Socket connection:
+
+```js
+socket.on("voteUpdated");
+```
+
+The admin dashboard updates automatically whenever a user votes.
+
+---
+
+# API Configuration
+
+Base API:
+
+```js
+http://localhost:3000/api
+```
+
+Update in:
+
+```bash
+src/services/api.js
+```
+
+---
+
+# UI Features
+
+- Dark modern dashboard
+- Responsive design
+- Glassmorphism cards
+- Animated transitions
+- Interactive charts
+
+---
+
+# Tailwind Setup
+
+Install Tailwind:
+
+```bash
+npm install -D tailwindcss @tailwindcss/vite
+```
+
+Add in:
+
+```css
+@import "tailwindcss";
+```
+
+---
+
+# Scripts
+
+## Start Development
+
+```bash
+npm run dev
+```
+
+## Build Production
+
+```bash
+npm run build
+```
+
+---
+
+# Docker Support (Optional)
+
+## Build Docker Image
+
+```bash
+docker build -t polling-frontend .
+```
+
+## Run Container
+
+```bash
+docker run -p 5173:5173 polling-frontend
+```
+
+---
+
+# Author
+
+Developed by Divesh
